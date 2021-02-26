@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Primeira Pagina com CSS</title>
+    <style>
+
+        /* Stylesheet 1: */
+        body {
+            font: 100% Lucida Sans, Verdana;
+            margin: 20px;
+            line-height: 26px;
+        }
+
+        .container {
+            xmin-width: 900px;
+        }
+
+        .wrapper {
+            position: relative;
+            overflow: auto;
+        }
+
+        #top, #sidebar, #bottom, .menuitem {
+            border-radius: 4px;
+            margin: 4px;
+        }
+
+        #top {
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 15px;
+        }
+
+        #menubar {
+            width: 200px;
+            float: left
+        }
+
+        #main {
+            padding: 10px;
+            margin: 0 210px;
+        }
+
+        #sidebar {
+            background-color: #32a4e7;
+            color: #ffffff;
+            padding: 10px;
+            width: 180px;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            position: absolute;
+        }
+
+        #bottom {
+            border: 1px solid #d4d4d4;
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            line-height: 14px;
+        }
+
+        #top h1, #top p, #menulist {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menuitem {
+            background-color: #f1f1f1;
+            border: 1px solid #d4d4d4;
+            list-style-type: none;
+            padding: 2px;
+            cursor: pointer;
+        }
+
+        .menuitem:hover {
+            background-color: #ffffff;
+        }
+
+        .menuitem:first-child {
+        background-color:#4CAF50;
+        color: white;
+        font-weight:bold;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+
+        @media (max-width: 800px) {
+            #sidebar {
+                width: auto;
+                position: relative;
+            } 
+            #main {
+                margin-right: 0;
+            }    
+            
+        }
+
+        @media (max-width: 600px) {
+            #menubar {
+                width: auto;
+                float: none;
+            }
+            #main {
+                margin: 0;
+            }    
+        }
+        </style>
+
+        <style>
+        
+        /* Stylesheet 2: */
+        body {
+            font-family: Arial;
+            background-color: #d14836;
+            line-height: 20px;
+        }
+
+        .container {
+            xmin-width: 900px;
+        }
+
+        .wrapper {
+            position: relative;
+            overflow: auto;
+        }
+
+        #top {
+            color: #ffffff;
+            padding: 15px;
+            font-size: 30px;
+            line-height: 26px;    
+        }
+
+        #top h1 {
+            margin:0;
+            line-height: 50px;
+        }
+
+        #menubar {
+            width: 190px;
+            float: right;
+        }
+
+        #main {
+            padding: 10px;
+            background-color: #ffffff;
+            font: 80% Verdana;
+        }
+
+        #main h1, #main h2 {
+            color: #d14836;
+        }
+
+        #sidebar {
+            background-color: #F6DAD7;
+            color: #d14836;
+            padding: 10px;
+        }
+
+        #bottom {
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            color: #ffffff;
+        }
+
+        #menulist {
+            padding:0;
+            font: 16px verdana;
+        }
+
+        .menuitem {
+            width: 155px;
+            background-color: #d14836;
+            border: 1px solid #d14836;
+            border-radius: 40px;
+            color: #ffffff;
+            list-style-type: none;
+            margin: 10px;
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .menuitem:nth-child(2) {
+        background-color:white;
+        color: #d14836;
+        font-weight:bold;
+        }
+
+        .menuitem:hover {
+            background-color: #ffffff;
+            color: #d14836;
+        }
+
+        a {
+            color: #d14836;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        </style>
+
+        <style>
+
+            /* Stylesheet 3: */
+
+        body {
+            font: 100% Verdana;
+            margin: 20px;
+            line-height: 26px;
+        }
+
+        .container {
+            xmin-width: 900px;
+        }
+
+        .wrapper {
+            position: relative;
+            overflow: auto;
+        }
+
+        #sidebar {
+            background-color: #f1f1f1;
+            border: 1px solid #d4d4d4;
+            padding-left: 10px;
+        }
+
+        #bottom {
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            line-height: 14px;
+        }
+
+        h1, h2, h3 {
+            color: #4CAF50;
+        }
+
+        #menulist {
+            padding: 0;
+            position: relative;
+            overflow: auto;
+        }
+
+        .menuitem {
+            width: 165px;
+            float: left;
+            background-color: #555555;
+            color: #ffffff;
+            list-style-type: none;
+            margin: 4px;
+            padding: 2px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .menuitem:nth-child(3) {
+        background-color:#4CAF50;
+        }
+
+        .menuitem:hover {
+            background-color: #999999;
+        }
+
+        a {
+            color: #000000;
+        }
+
+        a:hover {
+            color: #84c754;
+        }
+        </style>
+
+        <style>
+            /* Stylesheet 4: */
+        body {
+            font: 100% Courier New;
+            margin: 20px;
+            line-height: 26px;
+            background-color: #000000;
+        }
+
+        .container {
+            xmin-width: 900px;
+        }
+
+        .wrapper {
+            position: relative;
+            overflow: auto;
+        }
+
+        #top {
+            color: #84c754;
+            padding: 15px;
+        }
+
+        #main {
+            padding: 10px;
+            color: #84c754;
+        }
+
+        #sidebar {
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            padding: 10px;
+            width: 320px;
+            top: 0;
+            right: 0;
+            position: absolute;
+            font-size: 80%;
+            line-height: 20px;
+        }
+
+        #bottom {
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            line-height: 14px;
+        }
+
+        #top h1,#top p {
+            margin: 0;
+        }
+
+        .menuitem {
+            color: #84c754;
+            cursor: pointer;
+        }
+
+        .menuitem:nth-child(4) {
+            color:white;
+            font-weight:bold;
+        }
+
+        .menuitem:hover {
+            color: #ffffff;
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+        a:hover {
+            color: #84c754;
+        }
+        @media (max-width: 600px) {
+            #sidebar {
+            width: auto;
+            margin-bottom:10px;        
+            position: relative;
+            }    
+        }
+
+        </style> 
+        
+
+        <style> /* Estilo Yury: */        
+
+        /* configuração do corpo do site, espaçamento, margem e fonte */
+        body {
+            font: 100% Lucida Sans, Verdana;
+            margin: 20px;
+            line-height: 26px;
+        }        
+
+        .container {
+            xmin-width: 900px;
+        }                      
+
+        /* Parte superior do site */
+        #top {
+            background-color: #fed700;
+            color: #333e48;
+            font-family: "Open Sans",HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+            padding: 15px;
+        }
+
+        /* Configurar posicionamento do titulo na parte superior do site */
+        #top h1 {
+            margin:0;
+            line-height: 50px;
+        }
+
+        /* Acrecentar cor em todo manu */
+        #menubar {
+            background-color: #fed700;
+        }
+
+         /* Arredondar borda */
+        #top, #sidebar, #bottom, .menuitem , #menubar{
+            border-radius: 6px;
+            margin: 4px;
+        }    
+
+        /* Item da barra de menu */
+        .menuitem {
+            width: 165px;
+            float: left;
+            background-color: #fed700;
+            color: #333e48;
+            list-style-type: none;
+            margin: 4px;
+            font-family: "Open Sans",HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+            padding: 2px;
+            text-align: center;
+            cursor: pointer;
+            text-rendering: optimizeLegibility;                
+            font-weight: bold;              
+        }    
+     
+        #menulist {
+            padding: 0;            
+            position:relative;
+            overflow: auto;            
+        }   
+
+        /* Ultima parte do corpo do site*/
+        #bottom {
+            text-align:center;
+            padding: 10px;
+            font-size: 70%;
+            line-height: 14px;
+            font-family: "Open Sans",HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;   
+        }
+
+        /* Campo da Barra Lateral*/
+        #sidebar {
+            border: 1px solid #d4d4d4;
+            background-color: #fed700;
+            color: #333e48;
+            font-family: "Open Sans",HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+            padding-left: 10px;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            position:relative;  
+        }        
+       
+        /* Posição do corpo do site*/
+        .wrapper {
+            position: relative;
+            overflow: auto;
+        }
+       
+
+       /* Ao passar o mouse no botão do itemMenu */
+        .menuitem:hover {
+            background-color:#f4f8fa;
+        
+        }      
+
+        /* posicionamento do corpo do texte contido no MAIN*/
+        #main {
+            padding: 10px;
+            margin: 0 210px;
+        }
+
+       /* Informar a cor dos titulos contidos no MAIN */
+        #main h1, h2, h3 {
+            color: #0062bd;
+        }
+
+        /* Informar a fonte a ser utilizada no MAIN */
+        #main p{
+            font-family: "Open Sans",HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+            text-align:justify;
+        }   
+        
+        /*informar a cor dos link dentro do Main*/
+        #main a{
+            color: #007cba; 
+            font-family: "Open Sans",HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;              
+        }
+       
+        </style>
+
+</head>
+<body>
+    <script>    
+            
+             
+
+            function semEstilo(){
+                document.styleSheets[0].disabled = true;
+                document.styleSheets[1].disabled = true;
+                document.styleSheets[2].disabled = true;
+                document.styleSheets[3].disabled = true;
+                document.styleSheets[4].disabled = true;
+            }
+
+            function estilo01(){
+                semEstilo();
+                document.styleSheets[0].disabled = false;
+            }
+
+            function estilo02(){
+                semEstilo();
+                document.styleSheets[1].disabled = false;
+            }
+
+            function estilo03(){
+                semEstilo();
+                document.styleSheets[2].disabled = false;
+            }
+
+            function estilo04(){
+                semEstilo();
+                document.styleSheets[3].disabled = false;
+            }
+
+            function estilo05(){
+                semEstilo();
+                document.styleSheets[4].disabled = false;
+                alert("Bem Vindo a minha tela de HTML E CSS");
+            }
+
+            estilo01();
+
+    </script>
+   
+
+<div class="wrapper">  
+    <div id="top">    
+        <h1>Bem-Vindo à minha página inicial</h1>
+        <p>Use o menu para selecionar diferentes folhas de estilo</p>
+    </div>
+
+<div class="wrapper">
+    <div id="menubar">
+        <ul id="menulist">
+            <li onclick="estilo01()" class="menuitem">Folha de estilo 1 </li>
+            <li onclick="estilo02()" class="menuitem">Folha de estilo 2 </li>
+            <li onclick="estilo03()" class="menuitem">Folha de estilo 3 </li>
+            <li onclick="estilo04()" class="menuitem">Folha de estilo 4 </li>
+            <li onclick="semEstilo()" class="menuitem" >Sem folha de estilo</li>
+            <li onclick="estilo05()" class="menuitem">Estilo Yury</li>
+        </ul>
+    </div>
+
+    <div id="main">
+        <h1>Folhas de estilo diferentes na mesma página</h1>
+        <p>Esta é uma demonstração de como diferentes folhas de estilo podem alterar o layout de sua página HTML.
+            Você pode alterar o layout da página, selecionando diferentes folhas de estilo no menu, 
+            ou selecionando um dos seguintes links:<br>        
+        <a onclick="estilo01(0)" href="#" >Folha de estilo 1,</a>
+        <a onclick="estilo02(1)" href="#" >Folha de estilo 2,</a>
+        <a onclick="estilo03(2)" href="#" >Folha de estilo 3,</a>
+        <a onclick="estilo04(3)" href="#" >Folha de estilo 4,</a>
+        <a onclick="estilo05(4)" href="#" >Estilo Yury.</a>
+        </p>        
+            
+        <h2>Sem estilo</h2>
+        <p>Esta página usa 504 elementos para agrupar diferentes seções da página HTML. Clique aqui para ver
+            a aparência da página sem folha de estilo:<br>
+            <a onclick="semEstilo()" href="#" >Sem folha de estilo</a>
+        </p>
+        
+    </div>
+
+    <div id="sidebar">
+        <h3>Barra Lateral</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+            ut laoreet dolore magna aliquam erat volutpat.
+        </p>
+    </div>
+</div>
+
+    <div id="bottom">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 
+            ut laoreet dolore magna aliquam erat volutpat. É por isso que, por todos os anos, irei vir, quem
+            não deve exerci tation ullamcorper suscipit lobortis nisl ut aliquip dela a vantagem da receita. 
+            Lição de casa ou para o Bureau dolor sit amet, uma fotografia digital ou para qualquer magna At 
+            vero e combinações apenas permitem ativos que estão presentes eirmod tempor dolore magna nulla 
+            presentes.
+    </div>
+</div>  
+
+</body>
+</html>
